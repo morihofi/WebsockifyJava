@@ -98,6 +98,7 @@ public class WebsockifyServer extends WebSocketServer {
     private void forwardDataFromVncToWebSocket() {
         try {
 
+            //TODO: ByteBuffer verwenden
             byte[] buffer = new byte[4096];
             int bytesRead;
             while ((bytesRead = is.read(buffer)) != -1) {
