@@ -60,7 +60,7 @@ public class WebsockifyServer extends WebSocketServer {
             connections.put(conn,tcpSocket);
 
             // Starte den Thread zum Lesen der Daten vom VNC-Server und Senden an den WebSocket-Client
-            new Thread(() -> forwardDataFromVncToWebSocket(conn,tcpSocket)).start();
+            new Thread(() -> forwardDataFromTcpToWebSocket(conn,tcpSocket)).start();
 
         }catch (Exception ex){
             ex.printStackTrace();
@@ -145,7 +145,7 @@ public class WebsockifyServer extends WebSocketServer {
    //     return builder;
    // }
 
-    private void forwardDataFromVncToWebSocket(WebSocket wsConn, Socket tcpSocket) {
+    private void forwardDataFromTcpToWebSocket(WebSocket wsConn, Socket tcpSocket) {
 
 
         try {
@@ -183,7 +183,7 @@ public class WebsockifyServer extends WebSocketServer {
         String wsHost = "localhost";
         int wsPort = 8090;
 
-        WebSocketServer server = new WebsockifyServer(new InetSocketAddress(wsHost, wsPort), "localhost", 5901);
+        WebSocketServer server = new WebsockifyServer(new InetSocketAddress(wsHost, wsPort), "192.168.178.1", 80);
         server.run();
     }
 }
