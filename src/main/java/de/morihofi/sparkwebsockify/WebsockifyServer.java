@@ -151,7 +151,6 @@ public class WebsockifyServer extends WebSocketServer {
         try {
 
 
-            //TODO: ByteBuffer verwenden
             byte[] buffer = new byte[4096];
             int bytesRead;
             InputStream is = tcpSocket.getInputStream();
