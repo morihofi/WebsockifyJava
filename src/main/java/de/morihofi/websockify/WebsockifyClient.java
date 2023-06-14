@@ -1,4 +1,4 @@
-package de.morihofi.sparkwebsockify;
+package de.morihofi.websockify;
 
 import org.java_websocket.WebSocket;
 import org.java_websocket.client.WebSocketClient;
