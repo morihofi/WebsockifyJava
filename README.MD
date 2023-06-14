@@ -18,7 +18,7 @@ This is a proof of concept implementation of a Websockify server in Java. The se
 
 To use this Websockify server, follow the steps below:
 
-1. Clone the repository: git clone https://github.com/morihofi/WebsockifyJava
+1. Clone the repository: `git clone https://github.com/morihofi/WebsockifyJava`
 2. Open it in your favorite IDE
 
 ### Tunnel TCP to WebSocket
